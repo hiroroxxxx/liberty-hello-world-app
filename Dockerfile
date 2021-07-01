@@ -13,6 +13,8 @@ RUN installUtility viewSettings
 COPY repositories.properties /opt/ibm/wlp/etc/repositories.properties
 RUN installUtility viewSettings
 
+ARG VERBOSE=true
+
 # Generate Liberty config based on server.xml
 RUN configure.sh
 
