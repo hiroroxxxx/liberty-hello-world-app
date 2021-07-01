@@ -15,7 +15,7 @@ RUN chown 1001:0 /opt/ibm/wlp/etc
 RUN chown 1001:0 /opt/ibm/wlp/etc/repositories.properties
 USER 1001
 
-ARG VERBOSE=true
+#ARG VERBOSE=true
 
 # Generate Liberty config based on server.xml
 RUN configure.sh
