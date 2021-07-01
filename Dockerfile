@@ -11,6 +11,7 @@ USER 1001
 
 COPY repositories.properties /opt/ibm/wlp/etc/repositories.properties
 USER root
+RUN chown 1001:0 /opt/ibm/wlp/etc
 RUN chown 1001:0 /opt/ibm/wlp/etc/repositories.properties
 USER 1001
 
