@@ -9,6 +9,7 @@ USER root
 RUN chown 1001:0 /config/server.xml
 USER 1001
 
+RUN installUtility viewSettings
 COPY repositories.properties /opt/ibm/wlp/etc/repositories.properties
 RUN installUtility viewSettings
 
