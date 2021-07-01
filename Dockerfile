@@ -1,7 +1,9 @@
 #IMAGE: Get the base image for Liberty
 FROM websphere-liberty:19.0.0.9-kernel
 
-RUN featureManager install servlet-4.0 --when-file-exists=ignore --acceptLicense
+RUN find / -ls | grep repositories.properties
+
+#RUN featureManager install servlet-4.0 --when-file-exists=ignore --acceptLicense
 
 #BINARIES: Add in all necessary application binaries
 COPY wlp/config/server.xml /config/server.xml
